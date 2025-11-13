@@ -1,0 +1,5 @@
+# Ignore all JSON files
+*.json
+
+# Except mock data which might be needed for tests
+!mock_data/*.json
