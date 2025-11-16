@@ -1,17 +1,19 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=45", "setuptools_scm>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "spotify_rediscover_cli"
+name = "spotify-rediscover"
 version = "0.1.0"
-description = "Spotify Streaming History Analysis CLI"
-requires-python = ">=3.8"
-dependencies = ["pytest"]
-dynamic = ["authors"]
+description = "A tool for analyzing Spotify listening history"
+readme = "README.md"
+requires-python = ">=3.7"
+
+[project.scripts]
+spotify-rediscover = "spotify_rediscover_cli:main"
 
 [project.optional-dependencies]
 test = ["pytest"]
 
-[tool.setuptools.dynamic]
-authors = {attr = "setup.authors"}
+[tool.setuptools]
+packages = ["src"]
