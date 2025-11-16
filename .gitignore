@@ -3,3 +3,6 @@
 
 # Except mock data which might be needed for tests
 !mock_data/*.json
+
+# Ignore HTML reports
+report.html
