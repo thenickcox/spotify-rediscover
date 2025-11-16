@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spotify_rediscover_cli"
+version = "0.1.0"
+description = "Spotify Streaming History Analysis CLI"
+requires-python = ">=3.8"
+dependencies = ["pytest"]
+dynamic = ["authors"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.dynamic]
+authors = {attr = "setup.authors"}

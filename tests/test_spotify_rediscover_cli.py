@@ -16,12 +16,13 @@ from io import StringIO
 
 # Import the module to test - use a try/except to handle import errors gracefully
 try:
-    # Try direct import first
-    import spotify_rediscover_cli as src
+    # Try importing from src package
+    from src import spotify_rediscover_cli as src
 except ImportError:
-    # If that fails, try to add the parent directory to the path
-    sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-    import spotify_rediscover_cli as src
+    # If that fails, try to add the project root to the path
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    sys.path.insert(0, project_root)
+    from src import spotify_rediscover_cli as src
 
 # Mock data fixtures
 @pytest.fixture
@@ -378,7 +379,7 @@ class TestMainFunction:
         """Test main function with no files found"""
         with patch.object(sys, "argv", ["spotify_rediscover_cli.py", "empty_dir"]):
             # Mock expand_files to return empty list
-            with patch("spotify_rediscover_cli.expand_files", return_value=[]):
+            with patch("src.spotify_rediscover_cli.expand_files", return_value=[]):
                 with pytest.raises(SystemExit) as excinfo:
                     src.main()
                 
