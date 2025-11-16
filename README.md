@@ -6,6 +6,10 @@ Ever heard a song in a coffee shop and thought, "Oh wow, I used to LOVE this ban
 
 This isn't about tracking your current favorites—it's about uncovering the musical gems you've accidentally forgotten.
 
+**Example Output**
+![Table output example](img/rediscover_example.png)
+![Table output example](img/rediscover_example_2.png)
+
 **What Makes This Different:**
 - Reveals your past musical love affairs
 - Highlights artists you once adored but haven't heard in ages
