@@ -1,0 +1,6 @@
+# Remove all Streaming History JSON files
+Streaming_History_Audio_2015-2018_0.json
+Streaming_History_Audio_2018-2021_1.json
+Streaming_History_Audio_2021-2024_2.json
+Streaming_History_Audio_2024-2025_3.json
+Streaming_History_Video_2018-2025.json
